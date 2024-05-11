@@ -1,18 +1,14 @@
-# Nume proiect
+# Project Management Application
 
-Acest repository este un _template_ care poate servi ca punct de plecare pentru proiectul vostru de POO. Folosiți butonul de „Use this template” din dreapta sus pentru a vă crea propriul repo pe baza lui.
 
-## Descriere
+## Description
 
-Notați aici o scurtă descriere a temei alese de voi.
+The project management application found in this repo has some simple functionalities which have the following concepts under the hood:
 
-## Funcționalități
+- hierarchical inheritance (we have a pure virtual class Resource and 2 classes which inherit from it: SoftwareResource and LaborResource and a pure virtual class Task and 3 classes which inherit from it: BugTask, FeatureTask, ResearchTask)
+- runtime polymorpishm through virtual methods (we have virtual methods for reading, writing and calculating cost based on different types of tasks) - the instances of dynamic dispatch and upcasting were commented in the code
+- exceptions (a custom exception is defined and thrown in a try catch block, printing a specific message)
+- static member variable (we use it to count the number of created projects)
 
-Detaliația aici funcționalitățile pe care le îndeplinește aplicația voastră:
-- A
-- B
-- C
 
-## Referințe
 
-Notați aici ce alte resurse ați folosit / găsit utile pe parcursul dezvoltării proiectului.
