@@ -304,7 +304,7 @@ public:
         return os;
     }
 
-    // Virtual function for reading the task details
+    
     virtual istream& read(istream& is) {
         cout << "Enter Task Name: ";
         getline(is >> ws, task_name);
@@ -317,21 +317,20 @@ public:
         cout << "Enter End Date: ";
         is >> end_date;
 
-        // Read labor resources
         cout << "Enter Labor Resources:" << endl;
         LaborResource labor_res;
         while (is >> labor_res) {
             labor_resources.push_back(labor_res);
         }
-        is.clear(); // Clear stream state after reading labor resources
+        is.clear();
 
-        // Read software resources
+        
         cout << "Enter Software Resources:" << endl;
         SoftwareResource software_res;
         while (is >> software_res) {
             software_resources.push_back(software_res);
         }
-        is.clear(); // Clear stream state after reading software resources
+        is.clear(); 
 
         return is;
     }
@@ -400,7 +399,7 @@ public:
 
 
     ostream& print(ostream& os) const override {
-        Task::print(os); // Call base class print function
+        Task::print(os); 
         os << "Bug Description: " << bug_description << endl;
         os << "Severity: " << severity << endl;
         return os;
